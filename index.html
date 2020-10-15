@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How to Open a Successful Restaurant in Nevada</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alisha Sehgal & Wesley Zhen">
+        <meta name="description" content="How to open a successful restaurant in Vegas">
+
+        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+        <script src="http://code.highcharts.com/stock/highstock.js" SameSite=true></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/map.js" SameSite=true></script>
+        <script src="script/nevada-map.js"></script>
+        <script src="script/mark.min.js"></script>
+        <script src="script/main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="hi">
+                How to Open a Successful Restaurant in Nevada
+            </h1>
+            <h2>
+                By Nevada, we really mean Las Vegas because do you really care about the rest of Nevada?<br/>
+                
+            </h2>
+            
+            <a href src="https://www.kaggle.com/yelp-dataset/yelp-dataset?select=yelp_academic_dataset_business.json "target="_blank">Kaggle Data Source</a>
+            
+            <p style="margin: 4%; font-size: 1.2em; text-align: left;">
+                Use this site to learn the traits of successful restaurants in Las Vegas.
+                Begin by selecting one of the top 10 food category we curated from the Yelp Academic Business Dataset.
+                Once selected, our dashboard will show the follow information: top 3 restaurants, common daily hours,
+                common price range, common phrases found in reviews with sentiment analysis of chosen category.
+            </p>
+                
+           
+        </header>
+        <main>
+            <section id="introductionNavigation">
+                <figure id="nevadaStateMap">
+                    <!-- <img src="https://66.media.tumblr.com/9a308222a6529ec35860f65f35027d4b/tumblr_pod0byiMjF1y530ceo1_500.png" width: 300px height: 300px alt="nevada"> -->
+                </figure>
+                <table class="pure-table pure-table-horizontal" id="foodCategoryTable">
+                    <caption id=categoryCaption>Top 10 Food Category</caption>
+                    <thead>
+                        <tr>
+                            <th class="categoryHeader">Food Category</th>
+                            <th class="categoryHeader">Relevance</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <caption style="caption-side: bottom;text-align: left;">Relevance is the number of restaurants with specifed category found in Las Vegas. </caption>
+                </table>
+            </section>
+
+            <div>
+                <!-- <form id="form" class="pure-form" oninput="selectTableRow()" style="padding: 2%">
+                    <fieldset>
+                        <label for="rowNumber">Food Category</label>
+                            <input type="text" id="rowNumber">
+                    </fieldset>
+                </form> -->
+            </div>
+            <label id="scoreCardLabel" for="topRestaurantScoreCard" style="display:block;text-align:center;font-size: 1.2em;"></label>
+            <section id="topRestaurantScoreCard">
+                <table class="topRestaurantTable" id="topRestaurant1">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+                <table class="topRestaurantTable" id="topRestaurant2">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+                <table class="topRestaurantTable" id="topRestaurant3">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <p id="explanation" ></p>
+            <section id="hour">
+                <div id = "hourContainer">
+                    <span id="hourCaption"></span>
+                    <figure id="hourChart"></figure>
+                </div>
+                <figure id="priceChart"></figure>
+            </section>
+
+            
+            <section id="review-container">
+                <div id="PhraseTable">
+                    <table id="commonPhraseTable" class="pure-table pure-table-bordered"></table>
+                </div>
+                <div id="Context">
+                  <div id="Review"></div>
+                  <div id="Tip"></div>
+                  <div id="ReviewSentiment">
+                      <table id="reviewSentimentTable" class="pure-table pure-table-bordered"></table>
+                  </div>
+                  <div id="TipSentiment">
+                    <table id="tipSentimentTable" class="pure-table pure-table-bordered"></table>
+                  </div>
+                </div>
+              </section>
+        </main>
+    </body>
+</html>

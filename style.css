@@ -1,0 +1,119 @@
+header {
+    text-align: center;
+}
+
+#introductionNavigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-width: 20%;
+    overflow: visible;
+    justify-items: center !important;
+}
+
+#topRestaurantScoreCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center !important;
+    padding: 2%;
+}
+
+.topRestaurantTable {
+    width: 90%;
+    border: 1px solid darkgrey;
+}
+
+.topRestaurantTable th{
+    text-align: center;
+    padding: 2%;
+    vertical-align: middle;
+    background-color: lightgrey;
+    
+}
+
+.topRestaurantTable td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+#foodCategoryTable {
+    max-width: 45%;
+    text-align: center;
+}
+
+#categoryCaption {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.categoryHeader{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#hour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3%;
+}
+
+#hourCaption {
+    font-size: 1.1em;
+}
+
+
+#commonPhraseTable {
+    text-align: justify;
+    width: 80%;
+    font-size: 0.9em;
+}
+
+html, body, #review-container { height: 100%; margin: 0; }
+
+#review-container {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-template-rows: 1fr;
+  gap: 5px 10px;
+  grid-template-areas: "PhraseTable Context";
+  justify-items: center;
+  padding-left: 3%;
+  padding-bottom: 3%;
+}
+
+#PhraseTable { grid-area: PhraseTable; width: 100%;}
+
+#Context {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px 1px;
+  grid-template-areas: "Review ReviewSentiment" "Tip TipSentiment";
+  grid-area: Context;
+}
+
+#Review { grid-area: Review;}
+
+#Tip { grid-area: Tip; }
+
+#ReviewSentiment { grid-area: ReviewSentiment; }
+
+#TipSentiment { grid-area: TipSentiment; }
+
+#reviewSentimentTable {
+    margin-left: 3%;
+}
+
+#tipSentimentTable {
+    margin-top:3%;
+    margin-left: 3%;
+}
+
+#explanation {
+    margin: 4%;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+
+
+
